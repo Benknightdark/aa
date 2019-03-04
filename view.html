@@ -65,9 +65,7 @@
                 bindTo: window
             }
         });
-        /**
-         * Save diagram contents and print them to the console.
-         */
+      
         function exportDiagram() {
             bpmnModeler.saveXML({ format: true }, function (err, xml) {
                 if (err) {
@@ -77,11 +75,7 @@
                 console.log('DIAGRAM', xml);
             });
         }
-        /**
-         * Open diagram in our modeler instance.
-         *
-         * @param {String} bpmnXML diagram to display
-         */
+  
         function openDiagram(bpmnXML) {
             // import diagram
             bpmnModeler.importXML(bpmnXML, function (err) {
